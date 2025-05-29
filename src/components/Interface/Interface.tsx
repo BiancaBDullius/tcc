@@ -92,7 +92,7 @@ export default function Interface({
                                     style={{ cursor: 'pointer', flexGrow: 1 }}
                                     title={`Selecionar Ponto ${point.id}`}
                                 >
-                                    Ponto {point.id}
+                                    Ponto {points.indexOf(point) +1}
                                     <br />
                                     <span style={{fontSize: '0.8em'}}>
                                         X: {point.position[0].toFixed(1)}, Y: {point.position[1].toFixed(1)}, Z: {point.position[2].toFixed(1)}
@@ -116,7 +116,7 @@ export default function Interface({
                                     onMouseEnter={(e) => e.currentTarget.style.color = '#ff0000'} // Brighter red on hover
                                     onMouseLeave={(e) => e.currentTarget.style.color = '#ff8c8c'}
                                 >
-                                    🗑️
+                                    ❌​
                                 </button>
                             </li>
                         ))}

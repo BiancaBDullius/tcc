@@ -8,21 +8,50 @@ export default function HomePage() {
     <div
       style={{
         height: '100vh',
+        width: '100vw',
+        backgroundImage: `url('https://www.edf-re.uk/wp-content/uploads/2022/06/Dorenell_81.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingLeft: '5vw', // espaço da esquerda
       }}
     >
-      <button
+      <div
         style={{
-          padding: '1rem 2rem',
-          fontSize: '1.5rem',
-          cursor: 'pointer',
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          padding: '2rem',
+          borderRadius: '12px',
+          minWidth: '300px',
+          maxWidth: '90vw',
+          color: 'white',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
         }}
-        onClick={() => navigate('/upload')}
       >
-        Carregar JSON das turbinas
-      </button>
+        <h2 style={{ margin: 0 }}>Bem-vindo</h2>
+        <p style={{ margin: 0 }}>Clique abaixo para começar:</p>
+        <button
+          style={{
+            padding: '1rem 2rem',
+            fontSize: '1.2rem',
+            cursor: 'pointer',
+            backgroundColor: '#2e8b57',
+            color: 'white',
+            border: 'none',
+            borderRadius: '8px',
+            transition: 'background-color 0.3s ease',
+            alignSelf: 'flex-start',
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#246b45')}
+          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2e8b57')}
+          onClick={() => navigate('/upload')}
+        >
+          Entrar
+        </button>
+      </div>
     </div>
   )
 }
